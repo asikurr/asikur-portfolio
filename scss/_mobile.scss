@@ -1,0 +1,54 @@
+//For extra large device
+@include media-xl{
+    
+}
+//For large device like Desktops , laptops
+@include media-lg{
+
+}
+//For medium device like tablets , small laptops
+@include media-md{
+    main{
+        align-items: center;
+        text-align: center;
+        .lg-heading{
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    ul.menu-nav,
+    div.menu-branding{
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show{
+            transform: translate3d(0,0,0);
+        }
+    }
+    .menu-nav{
+        transform: translate3d(-100%, 0, 0);
+        font-size: 20px;
+        height: 65vh;
+        line-height: 1;
+    }
+    .menu-branding{
+        transform: translate3d(100%,0,0);
+        height: 35vh;
+        .portrait{
+            background: url('/dist/images/portrait_small.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 150px;
+            height: 150px;
+
+        }
+    }
+}
+//For small device like smart phone
+@include media-sm{
+    main#home h1{
+        margin-top: 10vh;
+    }
+}

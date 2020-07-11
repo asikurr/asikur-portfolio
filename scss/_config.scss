@@ -2,7 +2,7 @@ $primary-color:#444;
 $secondary-color:#eece1a;
 $show-home-image: true;
 $home-image:url(/dist/images/background.jpg);
-$background-opecity:0.7;
+$background-opecity:0.9;
 
 @mixin easeOut {
     transition: all 0.5s ease-out;
@@ -16,7 +16,7 @@ $background-opecity:0.7;
 
             &:after{
                 content: "";
-                position: absolute;
+                position: fixed;
                 top: 0;
                 right: 0;
                 z-index: -1;
@@ -25,5 +25,31 @@ $background-opecity:0.7;
                 background: rgba($primary-color,$background-opecity );
             }
         }
+    }
+}
+// Responsive design
+//For Small Device
+@mixin media-sm {
+    @media screen and (max-width:500px){
+        @content;
+    }
+}
+
+//For medium Device
+@mixin media-md {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+//For large Device
+@mixin media-lg {
+    @media screen and (min-width:769px) and (max-width:1170px){
+        @content;
+    }
+}
+//For extra large Device
+@mixin media-xl {
+    @media screen and (min-width:1171px){
+        @content;
     }
 }
