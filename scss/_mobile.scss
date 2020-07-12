@@ -55,11 +55,19 @@
         'job3';
         grid-template-columns: 1fr;
     }
+//Work Page Responsive
+    .projects{
+        grid-template-columns:repeat(2, 1fr);
+    }
 
 }
 //For small device like smart phone
 @include media-sm{
     main#home h1{
         margin-top: 10vh;
+    }
+    //Work Page Responsive
+    .projects{
+        grid-template-columns: 1fr;
     }
 }

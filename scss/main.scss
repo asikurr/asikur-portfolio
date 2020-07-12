@@ -116,5 +116,46 @@ main {
     color:setTextColor($primary-color);
     height: 60px;
 }
+//work page
+.projects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.7rem;
+    padding:10px;
+
+    img{
+        width:100%;
+        border: 3px solid $secondary-color;
+        &:hover{
+            opacity: 0.5;
+            border: 3px solid #fff;
+            @include easeOut;
+        }
+    }
+}
+.btn{
+    
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.3rem;
+    margin-left: 6px;
+
+    &:hover{
+        background: $secondary-color ;
+        color: setTextColor($secondary-color);
+    }
+}
+
+.btn-light{
+    @extend .btn;
+    background: lighten($primary-color , 30);
+    color: #fff;
+    
+}
+.btn-dark{
+    @extend .btn;
+    background: darken($primary-color , 30);
+    color: #333;
+}
 //It is here for Responsive design
 @import 'mobile';
