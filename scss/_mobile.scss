@@ -45,6 +45,17 @@
 
         }
     }
+//About Page Responsive
+    .about-info{
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+        grid-template-columns: 1fr;
+    }
+
 }
 //For small device like smart phone
 @include media-sm{
